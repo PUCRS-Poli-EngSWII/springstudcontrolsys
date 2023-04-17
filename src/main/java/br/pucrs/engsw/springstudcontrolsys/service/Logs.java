@@ -33,32 +33,39 @@ public class Logs {
 			}
 			log.info("===============================");
 
-			
+			log.info("*************************************************");
+			log.info("Estudantes com findByMatricula():");
+			log.info("-------------------------------");
+			log.info(repoEs.findByNroDocumento("00001").toString());
+			log.info(repoEs.findByNroDocumento("00002").toString());
+			log.info(repoEs.findByNroDocumento("00003").toString());
+			log.info(repoEs.findByNroDocumento("00004").toString());
+			log.info("===============================");
 
-			// log.info("*************************************************");
-			// log.info("Rel Horarios com findAll():");
-			// log.info("-------------------------------");
-			// for (HorarioTurmaDisc est : repoHu.findAll()) {
-			// 	log.info(est.toString());
-			// }
-			// log.info("===============================");
+			log.info("*************************************************");
+			log.info("Rel Horarios com findAll():");
+			log.info("-------------------------------");
+			for (HorarioTurmaDisc est : repoHu.findAll()) {
+				log.info(est.toString());
+			}
+			log.info("===============================");
 
-			// log.info("*************************************************");
-			// log.info("Disciplinas com findAll():");
-			// log.info("-------------------------------");
-			// for (Disciplina est : repoDi.findAll()) {
-			// 	log.info(est.toString());
-			// }
-			// log.info("===============================");
+			log.info("*************************************************");
+			log.info("Disciplinas com findAll():");
+			log.info("-------------------------------");
+			for (Disciplina est : repoDi.findAll()) {
+				log.info(est.toString());
+			}
+			log.info("===============================");
 
 
-			// log.info("*************************************************");
-			// log.info("Turmas com findAll():");
-			// log.info("-------------------------------");
-			// for (Turma est : repoTu.findAll()) {
-			// 	log.info(est.toString());
-			// }
-			// log.info("===============================");
+			log.info("*************************************************");
+			log.info("Turmas com findAll():");
+			log.info("-------------------------------");
+			for (Turma est : repoTu.findAll()) {
+				log.info(est.toString());
+			}
+			log.info("===============================");
 
 			log.info(repoHu.findByHorarioTurmaId(new TurmaId("130", "45000")).toString());
 

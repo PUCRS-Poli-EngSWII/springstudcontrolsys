@@ -1,7 +1,7 @@
 package br.pucrs.engsw.springstudcontrolsys.model;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+// import com.fasterxml.jackson.annotation.JsonBackReference;
+// import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
@@ -30,12 +30,16 @@ public class HorarioTurmaDisc {
     private String horario;
 
     @ManyToOne
-    @JsonBackReference
+    // @JsonBackReference
     @JoinColumn(name = "codDisciplina", insertable=false, updatable=false)
     private Disciplina disciplinaH;
 
     @ManyToOne
-    @JsonIgnore
+    // @JsonIgnore
     @JoinColumn(name = "codTurma", insertable=false, updatable=false)
     private Turma turmaH;
+
+    public String toString(){
+        return this.getHorarioTurmaId().getCodTurma() + " - " + this.getHorarioTurmaId().getCodDisciplina() + " - " + this.getHorario();
+    }
 }

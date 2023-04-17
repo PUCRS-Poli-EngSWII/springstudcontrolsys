@@ -12,11 +12,13 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
+@ToString
 @Entity
 @Table(name="DISCIPLINAS")
 public class Disciplina {
@@ -28,6 +30,6 @@ public class Disciplina {
     private String codDisciplina;
     private String nome;
     @OneToMany(mappedBy="disciplinaH")
-    @JsonManagedReference
+    // @JsonManagedReference
     private List<HorarioTurmaDisc> turmasHorarios;
  }
